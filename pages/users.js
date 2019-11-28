@@ -1,19 +1,25 @@
 import React from "react";
 import axios from "axios";
 
-import Link from 'next/link';
+import Link from "next/link";
+import Head from "next/head";
 
 const Users = ({ users }) => (
-  <div>
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.login}</li>
-      ))}
-    </ul>
-    <Link href="/">
-      <a>Voltar</a>
-    </Link>
-  </div>
+  <>
+    <Head>
+      <title>Users</title>
+    </Head>
+    <div>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>{user.login}</li>
+        ))}
+      </ul>
+      <Link href="/">
+        <a>Voltar</a>
+      </Link>
+    </div>
+  </>
 );
 
 Users.getInitialProps = async () => {
