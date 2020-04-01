@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import withAnalytics from "../src/hocs/withAnalytics";
+import withAnalytics from "~/hocs/withAnalytics";
 import styled from "styled-components";
 
 const Title = styled.h1`
